@@ -31,10 +31,17 @@ const products = [
 
 const projects = [
   {
-    place: "Krueng, Aceh",
-    title: "Warehouse Container",
+    place: "Krueng, Aceh & Natuna, Kepri",
+    title: "Fabrication & Supply",
     client: "Pertamina Port & Logistics",
-    images: ["/assets/project-container.jpg"],
+    images: [
+      "/assets/project-fabrication-01.jpg",
+      "/assets/project-fabrication-02.jpg",
+      "/assets/project-fabrication-03.jpg",
+      "/assets/project-fabrication-04.jpg",
+      "/assets/project-fabrication-05.jpg",
+      "/assets/project-fabrication-06.jpg",
+    ],
   },
   {
     place: "Natuna, Kepulauan Riau",
@@ -55,6 +62,35 @@ const projects = [
     images: ["/assets/project-ev-briefing.jpg", "/assets/project-ev-field.jpg"],
   },
 ];
+
+function ProjectSlideshow({ images, title, client }: { images: string[]; title: string; client: string }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (images.length < 2) return;
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % images.length);
+    }, 5000);
+    return () => window.clearInterval(timer);
+  }, [images.length]);
+
+  if (images.length === 1) {
+    return <img src={images[0]} alt={`${title} untuk ${client}`} />;
+  }
+
+  return (
+    <div className="project-slideshow" aria-label={`Dokumentasi ${title}`}>
+      {images.map((image, imageIndex) => (
+        <img
+          className={`project-slide ${imageIndex === activeIndex ? "is-active" : ""}`}
+          src={image}
+          alt={`${title} - dokumentasi ${imageIndex + 1}`}
+          key={image}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -200,21 +236,7 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project, index) => (
               <article className={`project-card project-${index + 1}`} key={project.title}>
-                {project.images.length === 1 ? (
-                  <img src={project.images[0]} alt={`${project.title} untuk ${project.client}`} />
-                ) : (
-                  <div className="project-slideshow" aria-label={`Dokumentasi ${project.title}`}>
-                    {project.images.map((image, imageIndex) => (
-                      <img
-                        className="project-slide"
-                        src={image}
-                        alt={`${project.title} - dokumentasi ${imageIndex + 1}`}
-                        key={image}
-                        style={{ animationDelay: `${imageIndex * 5}s` }}
-                      />
-                    ))}
-                  </div>
-                )}
+                <ProjectSlideshow images={project.images} title={project.title} client={project.client} />
                 <div className="project-meta">
                   <span>{project.place}</span>
                   <h3>{project.title}</h3>
