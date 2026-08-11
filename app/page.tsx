@@ -161,7 +161,11 @@ export default function Home() {
         <section className="trust-strip" aria-label="Klien dan mitra pilihan">
           <span>Dipercaya oleh</span>
           <div className="trust-names">
-            <b>PERTAMINA</b><b>WASKITA</b><b>PANRB</b><b>BML</b><b>BSD</b>
+            <img src="/assets/clients/pertamina.png" alt="Pertamina" />
+            <img src="/assets/clients/waskita.png" alt="Waskita" />
+            <img className="logo-bsd" src="/assets/clients/bsd.png" alt="Margautama Nusantara - PT Bintaro Serpong Damai" />
+            <img src="/assets/clients/bml.png" alt="BML - Chandra Batuah Mustika Lestari" />
+            <img className="logo-panrb" src="/assets/clients/panrb.png" alt="Kementerian PANRB" />
           </div>
         </section>
 
