@@ -44,10 +44,10 @@ const projects = [
     ],
   },
   {
-    place: "Natuna, Kepulauan Riau",
-    title: "Fabrication & Supply",
-    client: "Pertamina Port & Logistics",
-    images: ["/assets/project-logistics.jpg"],
+    place: "Cikopo, Jawa Barat",
+    title: "Sparepart Hino",
+    client: "Waskita Beton Precast",
+    images: ["/assets/project-sparepart-hino.jpg"],
   },
   {
     place: "Jakarta",
