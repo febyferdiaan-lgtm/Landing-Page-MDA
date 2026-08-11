@@ -147,7 +147,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-visual" aria-label="Dokumentasi proyek MDA">
-            <div className="hero-photo hero-photo-main"><img src="/assets/project-container.jpg" alt="Proyek warehouse container MDA" /></div>
+            <div className="hero-photo hero-photo-main"><img src="/assets/project-fabrication-06.jpg" alt="Proyek pengangkatan container dengan crane oleh MDA" /></div>
             <div className="hero-photo hero-photo-small"><img src="/assets/project-equipment.jpg" alt="Tim MDA di lokasi kerja" /></div>
             <div className="hero-stamp"><strong>24H</strong><span>Fast response<br />for procurement</span></div>
           </div>
