@@ -34,25 +34,25 @@ const projects = [
     place: "Krueng, Aceh",
     title: "Warehouse Container",
     client: "Pertamina Port & Logistics",
-    image: "/assets/project-container.jpg",
+    images: ["/assets/project-container.jpg"],
   },
   {
     place: "Natuna, Kepulauan Riau",
     title: "Fabrication & Supply",
     client: "Pertamina Port & Logistics",
-    image: "/assets/project-logistics.jpg",
+    images: ["/assets/project-logistics.jpg"],
   },
   {
     place: "Jakarta",
     title: "King Tony Tool Set",
     client: "Pertamina Lab & Research",
-    image: "/assets/project-tools.jpg",
+    images: ["/assets/project-tools.jpg"],
   },
   {
     place: "BSD, Tangerang",
     title: "Instalasi Charging EV",
     client: "PT Bintaro Serpong Damai",
-    image: "/assets/project-ev.jpg",
+    images: ["/assets/project-ev-briefing.jpg", "/assets/project-ev-field.jpg"],
   },
 ];
 
@@ -200,7 +200,21 @@ export default function Home() {
           <div className="project-grid">
             {projects.map((project, index) => (
               <article className={`project-card project-${index + 1}`} key={project.title}>
-                <img src={project.image} alt={`${project.title} untuk ${project.client}`} />
+                {project.images.length === 1 ? (
+                  <img src={project.images[0]} alt={`${project.title} untuk ${project.client}`} />
+                ) : (
+                  <div className="project-slideshow" aria-label={`Dokumentasi ${project.title}`}>
+                    {project.images.map((image, imageIndex) => (
+                      <img
+                        className="project-slide"
+                        src={image}
+                        alt={`${project.title} - dokumentasi ${imageIndex + 1}`}
+                        key={image}
+                        style={{ animationDelay: `${imageIndex * 5}s` }}
+                      />
+                    ))}
+                  </div>
+                )}
                 <div className="project-meta">
                   <span>{project.place}</span>
                   <h3>{project.title}</h3>
