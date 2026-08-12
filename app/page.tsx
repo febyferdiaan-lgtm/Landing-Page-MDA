@@ -13,7 +13,7 @@ const products = [
     number: "02",
     title: "Heavy Equipment Parts",
     copy: "Suku cadang andal untuk armada dan alat berat, dari komponen mesin hingga kebutuhan perawatan.",
-    image: "/assets/product-heavy.jpg",
+    image: "/assets/product-heavy-industrial.png",
   },
   {
     number: "03",
