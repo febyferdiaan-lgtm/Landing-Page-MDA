@@ -251,7 +251,7 @@ export default function Home() {
           </div>
           <div className="more-projects">
             <span>Juga berpengalaman dalam</span>
-            <p>Supply Part Hino · Seragam Eksekutif · Custom Pump System · Custom Panel · Karoseri</p>
+            <p>Supply Part Hino · Custom Seragam · Custom Pump System · Custom Panel · Karoseri</p>
           </div>
         </section>
 
