@@ -25,7 +25,7 @@ const products = [
     number: "04",
     title: "Custom Engineering",
     copy: "Solusi custom untuk generator, pump system, panel, karoseri, dan konstruksi sesuai spesifikasi.",
-    image: "/assets/product-generator.jpg",
+    image: "/assets/product-generator-industrial.png",
   },
 ];
 
