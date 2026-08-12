@@ -235,7 +235,7 @@ export default function Home() {
               <div className="section-kicker">04 / Rekam Proyek</div>
               <h2>Pekerjaan nyata.<br /><span>Dampak terukur.</span></h2>
             </div>
-            <p>Dari Aceh hingga Tangerang, MDA hadir di lapangan untuk menuntaskan kebutuhan mitra.</p>
+            <p>Siap Menjangkau Seluruh Indonesia, MDA hadir di lapangan untuk menuntaskan kebutuhan mitra.</p>
           </div>
           <div className="project-grid">
             {projects.map((project, index) => (
