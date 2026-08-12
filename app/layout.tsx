@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://landing-page-mda-amanah.vercel.app"),
   title: "PT MDA Amanah Sejahtera | Industrial Supply & Engineering",
   description: "Solusi pengadaan industri, tools, heavy equipment parts, electrical, dan custom engineering yang andal.",
   icons: { icon: "/assets/favicon.png", shortcut: "/assets/favicon.png" },
@@ -26,7 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
