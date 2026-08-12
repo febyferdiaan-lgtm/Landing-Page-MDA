@@ -19,7 +19,7 @@ const products = [
     number: "03",
     title: "Electrical & Industrial",
     copy: "Komponen elektrikal, panel, hose & fitting, serta kebutuhan industri dari merek tepercaya.",
-    image: "/assets/product-electrical.jpg",
+    image: "/assets/product-electrical-industrial.png",
   },
   {
     number: "04",
