@@ -194,6 +194,28 @@ button { font: inherit; }
 .contact-details div > span { display: block; margin-bottom: 11px; color: rgba(255,255,255,.43); font: 600 9px var(--font-geist-mono); letter-spacing: .15em; text-transform: uppercase; }
 .contact-details a, .contact-details p { margin: 0; font-size: 14px; line-height: 1.55; }
 
+.whatsapp-float {
+  position: fixed;
+  z-index: 90;
+  right: clamp(18px, 2.5vw, 36px);
+  bottom: clamp(18px, 2.5vw, 34px);
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 8px 18px 8px 8px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  background: #25d366;
+  color: white;
+  box-shadow: 0 12px 34px rgba(8, 52, 25, .3);
+  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+.whatsapp-float:hover { transform: translateY(-4px); background: #1fbd5a; box-shadow: 0 18px 42px rgba(8, 52, 25, .4); }
+.whatsapp-float:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.whatsapp-icon { width: 43px; height: 43px; display: grid; place-items: center; border-radius: 50%; background: white; color: #25d366; font-size: 23px; line-height: 1; transform: rotate(-18deg); }
+.whatsapp-label { display: flex; flex-direction: column; gap: 1px; font-size: 13px; font-weight: 720; line-height: 1.15; white-space: nowrap; }
+.whatsapp-label small { color: rgba(255,255,255,.78); font-size: 9px; font-weight: 550; letter-spacing: .04em; }
+
 footer { min-height: 140px; padding: 35px clamp(24px, 6vw, 96px); display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; background: var(--red); color: white; }
 footer img { width: 145px; filter: brightness(0) invert(1); }
 footer p { text-align: center; margin: 0; font-size: 12px; }
@@ -248,6 +270,9 @@ footer span { text-align: right; font: 550 9px var(--font-geist-mono); letter-sp
   .contact h2 { font-size: 51px; }
   .contact-actions { flex-direction: column; align-items: flex-start; }
   .contact-details { margin-top: 60px; }
+  .whatsapp-float { right: 14px; bottom: 14px; padding: 7px; }
+  .whatsapp-icon { width: 46px; height: 46px; }
+  .whatsapp-label { display: none; }
   footer { grid-template-columns: 1fr; gap: 25px; text-align: center; }
   footer img { margin: 0 auto; }
   footer span { text-align: center; }

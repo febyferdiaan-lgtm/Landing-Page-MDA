@@ -274,6 +274,17 @@ export default function Home() {
         </section>
       </main>
 
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/6281117885"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Hubungi PT MDA Amanah Sejahtera melalui WhatsApp"
+      >
+        <span className="whatsapp-icon" aria-hidden="true">☎</span>
+        <span className="whatsapp-label"><small>Butuh bantuan?</small>Hubungi Kami</span>
+      </a>
+
       <footer>
         <img src="/assets/mda-logo.png" alt="PT MDA Amanah Sejahtera" />
         <p>Consistently innovate to achieve meaningful goals.</p>
