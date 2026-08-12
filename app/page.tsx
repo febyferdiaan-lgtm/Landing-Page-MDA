@@ -7,7 +7,7 @@ const products = [
     number: "01",
     title: "Tools & Hardware",
     copy: "Authorized dealer King Tony dan M7 untuk kebutuhan tools profesional serta industrial hardware.",
-    image: "/assets/product-tools.jpg",
+    image: "/assets/product-tools-industrial.png",
   },
   {
     number: "02",
