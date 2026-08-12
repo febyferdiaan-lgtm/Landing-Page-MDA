@@ -262,8 +262,8 @@ export default function Home() {
             <h2>Ada kebutuhan<br />yang harus <em>segera</em>?</h2>
             <p>Ceritakan kebutuhan Anda. Tim kami siap merespons dan menyiapkan solusi yang tepat.</p>
             <div className="contact-actions">
-              <a className="button button-light" href="mailto:salesexecutivemda@gmail.com">Kirim Permintaan <b>↗</b></a>
-              <a className="contact-phone" href="tel:+62811177855"><span>Call us</span>+62 811 177 855</a>
+              <a className="button button-light" href="https://wa.me/6281117885" target="_blank" rel="noopener noreferrer">Kirim Permintaan <b>↗</b></a>
+              <a className="contact-phone" href="https://wa.me/6281117885" target="_blank" rel="noopener noreferrer"><span>Call us</span>+62 811 177 855</a>
             </div>
           </div>
           <div className="contact-details">
